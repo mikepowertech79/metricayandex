@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Website with Yandex Metrica</title>
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -15,3 +22,22 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/94974969" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+
+</head>
+<body>
+
+<h1>Welcome to My Simple Website</h1>
+
+<p>This is a simple paragraph. Click around to generate data for Yandex Metrica.</p>
+
+<button id="trackButton">Track this Button Click</button>
+
+<script type="text/javascript">
+   document.getElementById('trackButton').addEventListener('click', function() {
+       ym(94974969, 'reachGoal', 'BUTTON_CLICK');
+       alert('Button click tracked!');
+   });
+</script>
+
+</body>
+</html>
